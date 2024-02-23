@@ -21,3 +21,20 @@ console.log(typeof x, x);// printing more than one thing in console.log
 // Undefined, on the other hand, means the variable has been declared, but its value has not been assigned.
 let myvar = null;
 console.log(myvar,typeof myvar);
+// Why we are getting the typeof myvar as null? Object is a reference datatype in JS
+// this is a bug/error in JS, we need to remember that the typeof null variable is null and not Object
+// Why we have not changed/corrected this bug, because it will affect existing faremworks and all the codes built using JS,and ee need to do 
+// changes there as well, so let it be.
+//-------------------------------------------------------EXPLORING BIGINT------------------------------------------------------------------//
+//Bigint has been recently been added to JavaScript in 2020
+//There is a limit to the size of numbers you can store in JavaScript, which can be found by following line of code
+console.log(Number.MAX_SAFE_INTEGER);
+//If you want to store a number bgger than this than store it using BigInt primitive data type, samller numbers can be stored using this as well
+let mynum = BigInt(2323343444645646475766568688868868687);
+console.log(mynum);
+//There are two ways to store a BigInt number, one is using BigInt()constructor and second is to put n behind it.
+let mynum2=34333434534344534435n;
+console.log(mynum+mynum2);
+// We cannot mix BigInt with other datatypes, for examaple the following two lines of code with through Uncaught TypeError on executed.
+// let num3 = 12;
+//console.log(mynum+num3);
